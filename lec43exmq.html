@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Cards</title>
+    <style>
+        :root {
+            --card-bg-color: #ffffff;
+            --card-font-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .heading {
+            width: 300px;
+            background-color: var(--card-bg-color);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            border: 4px solid #007bff;
+        }
+
+        .heading:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .heading h1 {
+            font-size: 24px;
+            color: var(--card-font-color);
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #e3e3e3;
+            border-radius: 8px;
+            border: 2px solid #007bff;
+        }
+
+        .heading p {
+            font-size: 14px;
+            color: var(--card-font-color);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            font-size: 14px;
+            color: #ffffff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            :root {
+                --card-bg-color: #fce4ec; /* Light pink */
+                --card-font-color: rgb(211, 95, 115);
+            }
+
+            .btn{
+                background-color: rgb(211, 95, 115);    
+            }
+
+            .heading{
+                border: 4px solid rgb(211, 95, 115);
+            }  
+            
+            .heading h1{
+                border: 4px solid rgb(211, 95, 115);
+            }  
+        }
+
+        @media (max-width: 992px) {
+            :root {
+                --card-bg-color: #e3f2fd; /* Light blue */
+                --card-font-color: #333; /* Default color */
+            }
+
+            .btn{
+                background-color: rgb(0, 255, 255);
+            }
+
+            .heading{
+                border: 4px solid rgb(0, 255, 255);
+            }
+
+            .heading h1{
+                border: 4px solid rgb(0, 255, 255);
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --card-bg-color: #e8f5e9; /* Light green */
+                --card-font-color: #333; /* Default color */
+            }
+
+            .btn{
+                background-color: rgb(106, 238, 106);
+            }
+
+            .heading{
+                border: 4px solid rgb(106, 238, 106);
+            }
+
+            .heading h1{
+                border: 4px solid rgb(106, 238, 106);
+            }
+        }
+
+        @media (max-width: 576px) {
+            :root {
+                --card-bg-color: #fff9c4; /* Light yellow */
+                --card-font-color: #333; /* Default color */
+            }
+
+            .heading {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .btn{
+                background-color:   rgb(100, 100, 0);    
+            }
+
+            .heading{
+                border: 4px solid rgb(100, 100, 0);
+            }
+
+            .heading h1{
+                border: 4px solid rgb(100, 100, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- 1st card -->
+        <div class="heading">
+            <div class="card-header">
+                <h1>React</h1>
+            </div>
+            <div class="card-body">
+                <p>React is a JavaScript library for building user interfaces. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, rerum tenetur! Quisquam corporis ab nulla praesentium cum officia odit dolorem voluptate ratione doloremque, facilis assumenda laborum ex, aliquid deserunt quibusdam?.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <!-- 2nd card -->
+        <div class="heading">
+            <div class="card-header">
+                <h1>Vue</h1>
+            </div>
+            <div class="card-body">
+                <p>Vue is a JavaScript library for building user interfaces. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, rerum tenetur! Quisquam corporis ab nulla praesentium cum officia odit dolorem voluptate ratione doloremque, facilis assumenda laborum ex, aliquid deserunt quibusdam?.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <!-- 3rd card -->
+        <div class="heading">
+            <div class="card-header">
+                <h1>Angular</h1>
+            </div>
+            <div class="card-body">
+                <p>Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, rerum tenetur! Quisquam corporis ab nulla praesentium cum officia odit dolorem voluptate ratione doloremque, facilis assumenda laborum ex, aliquid deserunt quibusdam?.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <!-- 4th card -->
+        <div class="heading">
+            <div class="card-header">
+                <h1>jQuery</h1>
+            </div>
+            <div class="card-body">
+                <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, and animation much simpler with an easy-to-use API that works across a multitude of browsers. Lorem ipsum dolor sit amet consectetur ratione doloremque, facilis assumenda laborum ex, aliquid deserunt quibusdam?.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

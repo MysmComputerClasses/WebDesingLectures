@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 10vh;
+            background-color: black;
+        }
+        nav ul li{
+            display: inline-block;
+        }
+        nav ul li a{
+            list-style: none;
+            margin: 0 20px;
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        h1{
+            font-size: 200px;
+            color: red;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul li {
+                font-size: 15px;
+                display: block;
+                margin-right: 0;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            h1{
+                font-size: 21px ;
+                color: blueviolet;
+                padding: 20px 100px;
+            }
+
+        }
+
+
+        </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </nav>
+
+    <h1>Hellp World!</h1>
+</body>
+</html>

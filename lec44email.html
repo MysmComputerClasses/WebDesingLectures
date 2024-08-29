@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body{
+            background-color: #242837;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body .mainForm{
+            position: relative;
+            width: 400px;
+            padding: 25px;
+            background-color: #373e57;
+            border-radius: 10px;    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body .mainForm input{
+            width: 100%;
+            padding: 15px;
+            border: none;
+            color: aliceblue;
+            background: none;
+        }
+
+        body .mainForm input::placeholder{
+            color: aliceblue;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        form.invalid::before{
+            content: "";
+            position: absolute;
+            background: url('close.png') no-repeat center;
+            width: 22px;
+            height: 22px;
+            right: 15px;
+            background-size: cover;
+            transition: all 0.4s ease;
+        }
+
+        form.valid::before{
+            content: "";
+            position: absolute;
+            background: url('valid1.jpg') no-repeat center;
+            width: 22px;
+            height: 22px;
+            right: 15px;
+            background-size: cover;
+            transition: all 0.4s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" class="mainForm" id="emailForm">
+        <input type="text" name="username" id="inputBox" placeholder="Enter your Email">
+    </form>
+
+    <script>
+        let input = document.querySelector("#inputBox");
+        let form = document.querySelector("#emailForm");
+
+        function validate() {
+            let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (input.value.match(pattern)) {
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+            } else {
+                form.classList.add("invalid");
+                form.classList.remove("valid");
+            }
+        }
+
+        input.addEventListener("keyup", validate);
+    </script>
+    
+</body>
+</html>
